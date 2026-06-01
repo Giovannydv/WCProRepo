@@ -1,0 +1,202 @@
+﻿<Page x:Class="WCPro.Pages.LandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WCPro.Pages"
+      mc:Ignorable="d" 
+      Title="LandingPage"
+      Height="1200" 
+      Width="1920"
+      Background="Transparent">
+
+    <Page.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="RoundedMainScreenBtn" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#FF3C4146"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="FocusVisual1">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background1" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border1" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background1" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border1" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background1" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border1" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background1" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border1" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground1" Color="#FF838383"/>
+        <Style x:Key="RoundedWKBtn" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual1}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background1}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border1}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border1}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border1}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background1}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border1}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground1}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid>
+            <!-- Label para control de revisiones  -->
+            <Border Background="#212529"
+            CornerRadius="25" >
+                <Label x:Name="versionLabel" Content="V-0.0" FontSize="15" Margin="1845,1159,10,0" Foreground="White" RenderTransformOrigin="-0.649,5.448"/>
+            </Border>
+            <!-- Label para control de revisiones -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Titulo Principal -->
+                <TextBlock
+                   Grid.ColumnSpan="4"
+                   Text=" W i r e l e s s  C l i p s  S y s t e m "
+                   Foreground="#cdd7e0"
+                   FontFamily="Oswald"
+                   FontSize="60"
+                   Margin="318,0,65,0"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center"/>
+                <!-- Titulo Principal -->
+
+                <!-- Botones Cierre y Minimizacion -->
+                <Button x:Name="closebtn" Content="O" HorizontalAlignment="Left" Height="42" Margin="263,0,0,0" VerticalAlignment="Top" Width="57" Background="#FF212529" BorderBrush="{x:Null}" BorderThickness="0,0,0,0" Grid.Column="5" FontSize="20" Foreground="Red" Style="{DynamicResource RoundedMainScreenBtn}" FontWeight="Bold" Click="closebtn_Click"/>
+                <Button x:Name="minimizebtn" Content="O" HorizontalAlignment="Left" Height="42" Margin="201,0,0,0" VerticalAlignment="Top" Width="57" Background="#FF212529" BorderBrush="{x:Null}" BorderThickness="0,0,0,0" FontSize="20" Foreground="#FFFFDE00" Style="{DynamicResource RoundedMainScreenBtn}" FontWeight="Bold" Grid.Column="5" Click="minimizebtn_Click"/>
+                <!-- Botones Cierre y Minimizacion -->
+
+                <!-- Botones de Navegacion -->
+                <Button x:Name="prodbtn" Style="{DynamicResource RoundedMainScreenBtn}"  Foreground="#FFF76124" Background="#FF272B2F" FontWeight="Bold" Grid.Column="0" Grid.Row="2" Margin="102,106,107,103" Grid.ColumnSpan="2" FontSize="36" Click="prodbtn_Click">
+                    <StackPanel Orientation="Vertical" Height="180" Width="300px">
+                        <Image Source="/Icons/produccion.png" Stretch="Uniform" Height="100" Width="140"/>
+                        <TextBlock Text="PRODUCCION" FontSize="36" FontWeight="Bold" TextAlignment="Center" FontFamily="Bahnschrift" Foreground="White" Height="50" Width="256"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="setbtn" Style="{DynamicResource RoundedMainScreenBtn}" Foreground="#FFF76124" Background="#FF272B2F" FontWeight="Bold" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Margin="80,106,80,103" FontSize="36" Click="setbtn_Click">
+                    <StackPanel Orientation="Vertical" Height="180" Width="350px">
+                        <Image Source="/Icons/orden.png" Stretch="Uniform" Height="100" Width="150"/>
+                        <TextBlock Text="CONFIGURACION" FontSize="36" FontWeight="Bold" TextAlignment="Center" FontFamily="Bahnschrift" Foreground="White" Height="50" Width="291"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="dashbtn" Style="{DynamicResource RoundedMainScreenBtn}" Foreground="#FFF76124" Background="#FF272B2F" FontWeight="Bold" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="2" Margin="85,106,75,103" FontSize="36" Click="dashbtn_Click">
+                    <StackPanel Orientation="Vertical" Height="180" Width="300px">
+                        <Image Source="/Icons/panel.png" Stretch="Uniform" Height="100" Width="140"/>
+                        <TextBlock Text="DASHBOARD" FontSize="36" FontWeight="Bold" TextAlignment="Center" FontFamily="Bahnschrift" Foreground="White" Height="50" Width="256"/>
+                    </StackPanel>
+                </Button>
+                <!-- Botones de Navegacion -->
+
+            </Grid>
+            <!-- Icono ATBO Principal -->
+            <Image x:Name="iconLogo" Margin="570,275,538,602" RenderTransformOrigin="0.511,0.495" Source="/Assets/ATBOTS.png">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.036"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="230" Width="230" Margin="54,27,0,0" VerticalAlignment="Top" Source="/Assets/icon.png" Visibility="Visible"/>
+            <!-- Icono ATBO Principal -->
+        </Grid>
+    </Grid>
+</Page>

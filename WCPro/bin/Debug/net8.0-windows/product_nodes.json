@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Name": "NODE_1",
+    "MacAddress": "z654654dsf",
+    "NodeType": "Sensor",
+    "X": 227,
+    "Y": 153.86833333333334
+  },
+  {
+    "Id": 2,
+    "Name": "NODE_2",
+    "MacAddress": "qqqqqqq",
+    "NodeType": "Clip",
+    "X": 937,
+    "Y": 165.86833333333334
+  },
+  {
+    "Id": 3,
+    "Name": "NODE_3",
+    "MacAddress": "clipiclipcilpiblippi",
+    "NodeType": "Relay",
+    "X": 920,
+    "Y": 304.86833333333334
+  }
+]

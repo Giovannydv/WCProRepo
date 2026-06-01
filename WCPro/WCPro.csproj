@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="Assets\ATBOTS.png" />
+    <None Remove="Assets\icon.png" />
+    <None Remove="Icons\orden.png" />
+    <None Remove="Icons\panel.png" />
+    <None Remove="Icons\produccion.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\ATBOTS.png" />
+    <Resource Include="Assets\icon.png" />
+    <Resource Include="Icons\orden.png" />
+    <Resource Include="Icons\panel.png" />
+    <Resource Include="Icons\produccion.png" />
+  </ItemGroup>
+
+</Project>

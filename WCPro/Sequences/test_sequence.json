@@ -1,0 +1,22 @@
+﻿[
+  {
+    "stepNumber": 1,
+    "nodeId": 1,
+    "description": "Connect left clip"
+  },
+  {
+    "stepNumber": 2,
+    "nodeId": 2,
+    "description": "Connect right clip"
+  },
+  {
+    "stepNumber": 3,
+    "nodeId": 3,
+    "description": "Connect ground clip"
+  },
+  {
+    "stepNumber": 4,
+    "nodeId": 4,
+    "description": "Connect final clip"
+  }
+]

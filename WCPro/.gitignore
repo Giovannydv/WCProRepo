@@ -1,0 +1,13 @@
+﻿.vs /
+bin /
+obj /
+
+*.user
+*.rsuser
+*.suo
+
+TestResults /
+packages /
+
+*.cache
+*.log
